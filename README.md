@@ -28,4 +28,4 @@ Users can create QR codes from URLs with options to customize color, size, add a
 
 ## Installation
 1. Clone the repository:
-   git clone https://github.com/your-TirthG20/qr-code-generator.git
+   git clone https://github.com/TirthG20/qr-code-generator.git
