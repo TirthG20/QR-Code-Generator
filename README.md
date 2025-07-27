@@ -25,7 +25,3 @@ Users can create QR codes from URLs with options to customize color, size, add a
    - A download format (PNG, JPG, SVG, or PDF).
 3. Click "Generate QR Code" to create and automatically download the QR code.
 4. The QR code is displayed in the browser and downloaded in the chosen format.
-
-## Installation
-1. Clone the repository:
-   git clone https://github.com/TirthG20/qr-code-generator.git
