@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(135deg, #7e8caa, #2a5ca2);
+  }
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  button {
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .bg-opacity-90 {
+    background-color: rgba(255, 255, 255, 0.6);
+  }

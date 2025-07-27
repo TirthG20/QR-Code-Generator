@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex items-center justify-center">
+  <div id="particles-js" class="absolute inset-0"></div>
+  <div class="max-w-md w-full mx-4 p-6 rounded-lg shadow-lg bg-opacity-90 bg-white relative z-10">
+    <h1 class="text-2xl font-bold text-center mb-6">QR Code Generator</h1>
+    <form id="qrForm" class="space-y-4">
+      <div>
+        <label for="url" class="block text-sm font-medium text-gray-700">Website URL</label>
+        <input type="url" id="url" name="url" required class="mt-1 p-2 w-full border rounded-md" placeholder="https://example.com">
+      </div>
+      <div>
+        <label for="color" class="block text-sm font-medium text-gray-700">QR Code Color</label>
+        <input type="color" id="color" name="color" value="#000000" class="mt-1 p-1 w-full h-10 border rounded-md">
+      </div>
+      <div>
+        <label for="logo" class="block text-sm font-medium text-gray-700">Logo (Optional, PNG/JPG)</label>
+        <input type="file" id="logo" name="logo" accept="image/png, image/jpeg" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+      <div>
+        <label for="size" class="block text-sm font-medium text-gray-700">QR Code Size</label>
+        <select id="size" name="size" class="mt-1 p-2 w-full border rounded-md">
+          <option value="128">Small (128x128)</option>
+          <option value="256" selected>Medium (256x256)</option>
+          <option value="512">Large (512x512)</option>
+        </select>
+      </div>
+      <div>
+        <label for="format" class="block text-sm font-medium text-gray-700">File Format</label>
+        <select id="format" name="format" class="mt-1 p-2 w-full border rounded-md">
+          <option value="png" selected>PNG</option>
+          <option value="jpg">JPG</option>
+          <option value="svg">SVG</option>
+          <option value="pdf">PDF</option>
+        </select>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Generate QR Code</button>
+    </form>
+    <div id="qrContainer" class="mt-6 flex justify-center"></div>
+  </div>
+  <div id="expiredPage" class="hidden text-center text-red-500 font-bold text-xl">
+    <h1>QR Code Expired</h1>
+    <p>The QR code has expired. Please generate a new one.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
